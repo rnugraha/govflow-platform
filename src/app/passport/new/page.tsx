@@ -10,6 +10,7 @@ import {
 	Upload,
 } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -51,13 +52,16 @@ export default function NewPassportPage() {
 			{/* Page header */}
 			<div className="bg-blue-800 text-white">
 				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-					<Link
-						href="/"
-						className="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white transition-colors mb-4"
-					>
-						<ArrowLeft className="w-4 h-4" />
-						Back to Portal
-					</Link>
+					<div className="flex items-center justify-between mb-4">
+						<Link
+							href="/"
+							className="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white transition-colors"
+						>
+							<ArrowLeft className="w-4 h-4" />
+							Back to Portal
+						</Link>
+						<ThemeToggle />
+					</div>
 					<div className="flex items-start justify-between gap-4">
 						<div>
 							<div className="flex items-center gap-2 mb-1">

@@ -26,6 +26,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const services = [
 	{
@@ -159,6 +160,7 @@ export default function Home() {
 							<Link href="#" className="hover:text-white transition-colors">
 								Contact
 							</Link>
+							<ThemeToggle />
 							<Button
 								size="sm"
 								className="bg-white text-blue-800 hover:bg-blue-50 font-semibold"
@@ -172,7 +174,7 @@ export default function Home() {
 
 			<main className="flex-1">
 				{/* Hero */}
-				<section className="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-600 text-white">
+				<section className="bg-linear-to-br from-blue-800 via-blue-700 to-blue-600 text-white">
 					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 						<div className="max-w-3xl">
 							<Badge className="mb-4 bg-blue-500/30 text-blue-100 border-blue-400/40 hover:bg-blue-500/30">
@@ -392,7 +394,7 @@ export default function Home() {
 
 				{/* Passport CTA Banner */}
 				<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-					<div className="rounded-2xl bg-gradient-to-r from-blue-800 to-blue-600 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+					<div className="rounded-2xl bg-linear-to-r from-blue-800 to-blue-600 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
 						<div className="max-w-lg">
 							<div className="flex items-center gap-2 mb-3">
 								<Users className="w-5 h-5 text-blue-200" />
