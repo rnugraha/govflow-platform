@@ -15,11 +15,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-pnpm dev          # dev server on http://localhost:3000
-pnpm build        # production build
-pnpm check        # biome lint + format + import sort (auto-fix)
-pnpm lint         # biome lint only
-pnpm format       # biome format only
+pnpm dev              # dev server on http://localhost:3000
+pnpm build            # production build
+pnpm check            # biome lint + format + import sort (auto-fix)
+pnpm lint             # biome lint only
+pnpm format           # biome format only
+pnpm storybook        # Storybook on http://localhost:6006
+pnpm build-storybook  # static Storybook build
 ```
 
 ## Project structure
@@ -28,7 +30,9 @@ pnpm format       # biome format only
 src/
   app/            # Next.js App Router — layouts, pages, route handlers
   components/ui/  # shadcn/ui generated components (do not hand-edit)
+  stories/        # Storybook stories (*.stories.tsx)
   lib/utils.ts    # cn() helper (clsx + tailwind-merge)
+.storybook/       # Storybook config (main.ts, preview.ts)
 components.json   # shadcn/ui registry config (style: radix-nova)
 biome.json        # linter/formatter config
 ```
