@@ -31,6 +31,22 @@ const BUILDINGS = [
 	{ x: 1278, w: 48, top: 130 },
 	{ x: 1326, w: 58, top: 115 },
 	{ x: 1384, w: 56, top: 142 },
+	{ x: 1440, w: 46, top: 100 },
+	{ x: 1486, w: 32, top: 68 },
+	{ x: 1518, w: 54, top: 85 },
+	{ x: 1572, w: 28, top: 55 },
+	{ x: 1600, w: 60, top: 90 },
+	{ x: 1660, w: 38, top: 120 },
+	{ x: 1698, w: 44, top: 72 },
+	{ x: 1742, w: 30, top: 48 },
+	{ x: 1772, w: 56, top: 78 },
+	{ x: 1828, w: 36, top: 102 },
+	{ x: 1864, w: 48, top: 62 },
+	{ x: 1912, w: 26, top: 88 },
+	{ x: 1938, w: 52, top: 115 },
+	{ x: 1990, w: 40, top: 76 },
+	{ x: 2030, w: 34, top: 95 },
+	{ x: 2064, w: 36, top: 140 },
 ] as const;
 
 const SVG_H = 180;
@@ -81,7 +97,7 @@ export function CitySkyline() {
 			aria-hidden="true"
 		>
 			<svg
-				viewBox="0 0 1440 180"
+				viewBox="0 0 2100 180"
 				className="w-full h-full"
 				preserveAspectRatio="xMidYMax slice"
 			>
