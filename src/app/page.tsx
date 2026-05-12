@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { CitySkyline } from "@/components/city-skyline";
 
 const services = [
 	{
@@ -174,8 +175,9 @@ export default function Home() {
 
 			<main className="flex-1">
 				{/* Hero */}
-				<section className="bg-linear-to-br from-blue-800 via-blue-700 to-blue-600 text-white">
-					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+				<section className="relative overflow-hidden bg-linear-to-br from-blue-900 via-blue-700 to-blue-500 text-white">
+					<CitySkyline />
+					<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 						<div className="max-w-3xl">
 							<Badge className="mb-4 bg-blue-500/30 text-blue-100 border-blue-400/40 hover:bg-blue-500/30">
 								<Star className="w-3 h-3 mr-1" />
@@ -213,8 +215,8 @@ export default function Home() {
 						</div>
 					</div>
 
-					{/* Wave divider */}
-					<div className="overflow-hidden">
+					{/* Wave divider — kept outside z-10 so it doesn't paint over the stats cards below */}
+					<div className="relative overflow-hidden">
 						<svg
 							viewBox="0 0 1440 48"
 							className="w-full block"
@@ -230,7 +232,7 @@ export default function Home() {
 				</section>
 
 				{/* Stats */}
-				<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 mb-16">
+				<section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 mb-16">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 						{stats.map((stat) => (
 							<Card
@@ -238,7 +240,7 @@ export default function Home() {
 								className="text-center border-border/60 shadow-sm"
 							>
 								<CardContent className="pt-6 pb-5">
-									<p className="text-2xl font-bold text-blue-700">
+									<p className="text-2xl font-bold text-blue-700 dark:text-blue-200">
 										{stat.value}
 									</p>
 									<p className="text-sm text-muted-foreground mt-1">

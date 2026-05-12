@@ -117,6 +117,22 @@
 	--sidebar-ring: oklch(0.556 0 0);
 }
 
+@keyframes window-twinkle {
+	0%, 100% { opacity: 0.1; }
+	50% { opacity: 0.7; }
+}
+.window-twinkle {
+	animation: window-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes beacon-blink {
+	0%, 88%, 100% { fill: rgba(147, 197, 253, 0.15); }
+	90%, 96% { fill: rgba(239, 68, 68, 0.85); }
+}
+.beacon-blink {
+	animation: beacon-blink 5s ease-in-out infinite;
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
