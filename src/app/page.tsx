@@ -232,7 +232,7 @@ export default function Home() {
 				</section>
 
 				{/* Stats */}
-				<section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 mb-16">
+				<section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-16">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 						{stats.map((stat) => (
 							<Card
