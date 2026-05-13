@@ -351,9 +351,12 @@ export default function NewPassportPage() {
 							<Button
 								size="lg"
 								className="bg-blue-700 hover:bg-blue-800 flex-1 sm:flex-none sm:min-w-[180px]"
+								asChild
 							>
-								Continue to Documents
-								<ChevronRight className="ml-1 w-4 h-4" />
+								<Link href="/passport/new/documents">
+									Continue to Documents
+									<ChevronRight className="ml-1 w-4 h-4" />
+								</Link>
 							</Button>
 							<Button variant="outline" size="lg" asChild>
 								<Link href="/">Cancel</Link>
