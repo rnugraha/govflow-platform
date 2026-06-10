@@ -16,12 +16,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const steps = [
@@ -76,13 +71,7 @@ function Field({ label, value }: { label: string; value: string }) {
 	);
 }
 
-function DocRow({
-	label,
-	uploaded,
-}: {
-	label: string;
-	uploaded: boolean;
-}) {
+function DocRow({ label, uploaded }: { label: string; uploaded: boolean }) {
 	return (
 		<div className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
 			<span className="text-sm text-muted-foreground">{label}</span>
@@ -182,9 +171,9 @@ export default function ReviewPage() {
 								<div className="flex gap-3">
 									<Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
 									<p className="text-sm text-blue-700 dark:text-blue-400 leading-relaxed">
-										Please review all details carefully before submitting.
-										After submission you will receive a reference number by email
-										and SMS. Bring your original documents to the passport office
+										Please review all details carefully before submitting. After
+										submission you will receive a reference number by email and
+										SMS. Bring your original documents to the passport office
 										within <strong>14 days</strong> to complete verification.
 									</p>
 								</div>
@@ -272,11 +261,11 @@ export default function ReviewPage() {
 											Final Declaration
 										</p>
 										<p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-											By submitting this application I confirm that all information
-											and documents provided are true, complete, and correct.
-											I understand that submitting false information is a criminal
-											offence under Municipal Regulation No. 4/2021 and may result
-											in prosecution.
+											By submitting this application I confirm that all
+											information and documents provided are true, complete, and
+											correct. I understand that submitting false information is
+											a criminal offence under Municipal Regulation No. 4/2021
+											and may result in prosecution.
 										</p>
 										<label className="flex items-start gap-2 mt-3 cursor-pointer">
 											<input
@@ -284,8 +273,8 @@ export default function ReviewPage() {
 												className="mt-0.5 accent-blue-700"
 											/>
 											<span className="text-amber-800 dark:text-amber-300 font-medium">
-												I confirm the above declaration and consent to processing
-												of my personal data for this application
+												I confirm the above declaration and consent to
+												processing of my personal data for this application
 											</span>
 										</label>
 									</div>
@@ -329,11 +318,15 @@ export default function ReviewPage() {
 							</CardHeader>
 							<CardContent className="text-sm space-y-2">
 								<div className="flex justify-between">
-									<span className="text-muted-foreground">Regular passport (48 pages)</span>
+									<span className="text-muted-foreground">
+										Regular passport (48 pages)
+									</span>
 									<span className="font-medium">€ 35</span>
 								</div>
 								<div className="flex justify-between">
-									<span className="text-muted-foreground">Standard processing</span>
+									<span className="text-muted-foreground">
+										Standard processing
+									</span>
 									<span className="font-medium text-green-600">Free</span>
 								</div>
 								<Separator className="my-2" />
@@ -389,8 +382,8 @@ export default function ReviewPage() {
 								<div className="flex gap-2">
 									<span className="font-bold text-foreground shrink-0">3.</span>
 									<span>
-										Passport ready in 3–5 business days after verification.
-										You will be notified by SMS.
+										Passport ready in 3–5 business days after verification. You
+										will be notified by SMS.
 									</span>
 								</div>
 							</CardContent>
@@ -399,7 +392,9 @@ export default function ReviewPage() {
 						{/* Help */}
 						<Card className="border-border/60">
 							<CardContent className="pt-5 text-xs text-muted-foreground space-y-1">
-								<p className="font-medium text-foreground text-sm">Need help?</p>
+								<p className="font-medium text-foreground text-sm">
+									Need help?
+								</p>
 								<p>Call us at (021) 555-0100</p>
 								<p>Mon–Fri · 08:00–16:00</p>
 								<Link

@@ -189,10 +189,19 @@ export default function DocumentsPage() {
 											Document Requirements
 										</p>
 										<ul className="text-blue-700 dark:text-blue-400 space-y-1 text-xs leading-relaxed list-disc list-inside">
-											<li>All files must be clear and fully legible — no blurry or cropped images</li>
+											<li>
+												All files must be clear and fully legible — no blurry or
+												cropped images
+											</li>
 											<li>Documents must be valid and not expired</li>
-											<li>Bring original documents to the passport office for verification</li>
-											<li>Accepted formats: JPEG, PNG, PDF — maximum 10 MB per file</li>
+											<li>
+												Bring original documents to the passport office for
+												verification
+											</li>
+											<li>
+												Accepted formats: JPEG, PNG, PDF — maximum 10 MB per
+												file
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -227,10 +236,10 @@ export default function DocumentsPage() {
 											Document Authenticity
 										</p>
 										<p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-											I confirm that all uploaded documents are authentic, unaltered,
-											and belong to the applicant named in Step 1. Submission of
-											forged documents is a criminal offence under Municipal
-											Regulation No. 4/2021.
+											I confirm that all uploaded documents are authentic,
+											unaltered, and belong to the applicant named in Step 1.
+											Submission of forged documents is a criminal offence under
+											Municipal Regulation No. 4/2021.
 										</p>
 										<label className="flex items-start gap-2 mt-3 cursor-pointer">
 											<input
@@ -309,7 +318,10 @@ export default function DocumentsPage() {
 											<span className="text-muted-foreground">
 												{u.label}
 												{!u.required && (
-													<span className="text-muted-foreground/60"> (optional)</span>
+													<span className="text-muted-foreground/60">
+														{" "}
+														(optional)
+													</span>
 												)}
 											</span>
 										</li>
@@ -321,7 +333,9 @@ export default function DocumentsPage() {
 						{/* Help */}
 						<Card className="border-border/60">
 							<CardContent className="pt-5 text-xs text-muted-foreground space-y-1">
-								<p className="font-medium text-foreground text-sm">Need help?</p>
+								<p className="font-medium text-foreground text-sm">
+									Need help?
+								</p>
 								<p>Call us at (021) 555-0100</p>
 								<p>Mon–Fri · 08:00–16:00</p>
 								<Link

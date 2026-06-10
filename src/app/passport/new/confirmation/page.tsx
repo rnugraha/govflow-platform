@@ -14,12 +14,7 @@ import {
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const REF = "PA-2026-047821";
@@ -120,7 +115,9 @@ export default function ConfirmationPage() {
 									<div className="w-px flex-1 bg-border mt-2" />
 								</div>
 								<div className="pb-5">
-									<p className="text-sm font-semibold">Visit a Passport Office</p>
+									<p className="text-sm font-semibold">
+										Visit a Passport Office
+									</p>
 									<p className="text-sm text-muted-foreground mt-0.5">
 										Bring your original documents and payment (€ 35) within{" "}
 										<strong>14 days</strong>. Quote your reference number at the
@@ -153,8 +150,8 @@ export default function ConfirmationPage() {
 									<p className="text-sm font-semibold">Passport Ready</p>
 									<p className="text-sm text-muted-foreground mt-0.5">
 										Standard processing takes <strong>3–5 business days</strong>{" "}
-										after verification. You will receive an SMS when your passport
-										is ready for collection.
+										after verification. You will receive an SMS when your
+										passport is ready for collection.
 									</p>
 								</div>
 							</li>
@@ -255,8 +252,8 @@ export default function ConfirmationPage() {
 
 				<p className="text-center text-xs text-muted-foreground mt-8">
 					Application reference{" "}
-					<span className="font-mono font-semibold">{REF}</span> ·{" "}
-					Municipality of Arkadia · Passport Office · 2026
+					<span className="font-mono font-semibold">{REF}</span> · Municipality
+					of Arkadia · Passport Office · 2026
 				</p>
 			</div>
 		</div>
