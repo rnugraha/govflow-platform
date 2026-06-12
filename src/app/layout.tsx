@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, EB_Garamond, Inter, Roboto_Slab } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const interHeading = Inter({subsets:['latin'],variable:'--font-heading'});
+
+const robotoSlab = Roboto_Slab({subsets:['latin'],variable:'--font-serif'});
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -27,7 +32,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+			className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-serif", robotoSlab.variable, interHeading.variable)}
 			suppressHydrationWarning
 		>
 			<body className="min-h-full flex flex-col bg-background text-foreground">
