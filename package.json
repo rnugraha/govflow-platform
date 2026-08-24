@@ -10,7 +10,9 @@
 		"format": "biome format --write .",
 		"check": "biome check --write .",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"test:e2e": "playwright test",
+		"test:e2e:ui": "playwright test --ui"
 	},
 	"dependencies": {
 		"class-variance-authority": "^0.7.1",
@@ -28,6 +30,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
 		"@chromatic-com/storybook": "^5.2.1",
+		"@playwright/test": "^1.62.1",
 		"@storybook/addon-a11y": "^10.4.5",
 		"@storybook/addon-docs": "^10.4.5",
 		"@storybook/addon-onboarding": "^10.4.5",
@@ -39,7 +42,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitest/browser-playwright": "^4.1.9",
 		"@vitest/coverage-v8": "^4.1.9",
-		"playwright": "^1.61.0",
+		"playwright": "^1.62.1",
 		"storybook": "^10.4.5",
 		"tailwindcss": "^4.3.1",
 		"typescript": "^5.9.3",

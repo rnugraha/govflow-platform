@@ -16,6 +16,8 @@ import {
 	Users,
 } from "lucide-react";
 import Link from "next/link";
+import { CitySkyline } from "@/components/city-skyline";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,8 +28,6 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { CitySkyline } from "@/components/city-skyline";
 
 const services = [
 	{
@@ -162,10 +162,7 @@ export default function Home() {
 								Contact
 							</Link>
 							<ThemeToggle />
-							<Button
-								size="sm"
-								className="bg-white text-blue-800 hover:bg-blue-50 font-semibold"
-							>
+							<Button size="sm" variant="secondary">
 								My Account
 							</Button>
 						</nav>
@@ -193,11 +190,7 @@ export default function Home() {
 								to business permits. Fast, secure, and available 24/7.
 							</p>
 							<div className="flex flex-wrap gap-3">
-								<Button
-									asChild
-									size="lg"
-									className="bg-white text-blue-800 hover:bg-blue-50 font-semibold shadow-lg"
-								>
+								<Button asChild size="lg" variant="secondary">
 									<Link href="/passport/new">
 										Apply for Passport
 										<ArrowRight className="ml-2 w-4 h-4" />
@@ -414,11 +407,7 @@ export default function Home() {
 							</p>
 						</div>
 						<div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0">
-							<Button
-								asChild
-								size="lg"
-								className="bg-white text-blue-800 hover:bg-blue-50 font-semibold whitespace-nowrap shadow-lg"
-							>
+							<Button asChild size="lg" variant="secondary">
 								<Link href="/passport/new">
 									Start Application
 									<ArrowRight className="ml-2 w-4 h-4" />
