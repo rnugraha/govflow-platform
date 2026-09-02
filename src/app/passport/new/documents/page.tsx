@@ -3,14 +3,11 @@ import {
 	ArrowLeft,
 	CheckCircle2,
 	ChevronRight,
-	Clock,
-	FileText,
 	Info,
 	Upload,
-	X,
 } from "lucide-react";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
+import Header from "@/components/header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,12 +17,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-
-const steps = [
-	{ label: "Personal Info", active: false, done: true },
-	{ label: "Documents", active: true, done: false },
-	{ label: "Review & Pay", active: false, done: false },
-];
 
 const uploads = [
 	{
@@ -107,73 +98,7 @@ export default function DocumentsPage() {
 	return (
 		<div className="min-h-screen bg-muted/30">
 			{/* Page header */}
-			<div className="bg-blue-800 text-white">
-				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-					<div className="flex items-center justify-between mb-4">
-						<Link
-							href="/passport/new"
-							className="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white transition-colors"
-						>
-							<ArrowLeft className="w-4 h-4" />
-							Back to Personal Info
-						</Link>
-						<ThemeToggle />
-					</div>
-					<div className="flex items-start justify-between gap-4">
-						<div>
-							<div className="flex items-center gap-2 mb-1">
-								<FileText className="w-5 h-5 text-blue-300" />
-								<span className="text-xs text-blue-300 uppercase tracking-wider font-medium">
-									Citizen Services / Passport
-								</span>
-							</div>
-							<h1 className="text-2xl md:text-3xl font-bold">
-								New Passport Application
-							</h1>
-							<p className="text-blue-200 mt-1 text-sm">
-								Form PA-01 · Municipality of Arkadia · Passport Office
-							</p>
-						</div>
-						<Badge className="bg-blue-600/40 text-blue-100 border-blue-500/30 hover:bg-blue-600/40 shrink-0 hidden sm:flex">
-							<Clock className="w-3 h-3 mr-1" />
-							~10 min
-						</Badge>
-					</div>
-
-					{/* Step indicator */}
-					<div className="flex items-center gap-2 mt-6">
-						{steps.map((step, i) => (
-							<div key={step.label} className="flex items-center gap-2">
-								<div
-									className={`flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full ${
-										step.active
-											? "bg-white text-blue-800"
-											: step.done
-												? "bg-blue-600/60 text-blue-100"
-												: "bg-blue-700/50 text-blue-300"
-									}`}
-								>
-									<span
-										className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold ${
-											step.active
-												? "bg-blue-700 text-white"
-												: step.done
-													? "bg-blue-400/60 text-white"
-													: "bg-blue-600/50"
-										}`}
-									>
-										{step.done ? "✓" : i + 1}
-									</span>
-									{step.label}
-								</div>
-								{i < steps.length - 1 && (
-									<ChevronRight className="w-3.5 h-3.5 text-blue-500" />
-								)}
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
+			<Header currentStep={2} />
 
 			<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 				<div className="grid lg:grid-cols-3 gap-6">
