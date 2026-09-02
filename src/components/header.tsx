@@ -6,7 +6,7 @@ import { ThemeToggle } from "./theme-toggle";
 const steps = [
 	{ label: "Personal Info", backToUrl: "/" },
 	{ label: "Documents", backToUrl: "/passport/new" },
-	{ label: "Review & Pay", backToUrl: "/passport/documents" },
+	{ label: "Review & Pay", backToUrl: "/passport/new/documents" },
 ];
 
 interface IHeader {
